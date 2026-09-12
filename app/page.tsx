@@ -8,10 +8,13 @@ type Language = "en" | "vi";
 const copy = {
   en: {
     nav: ["Features", "Screens", "Deploy", "Limits"],
+    navLabel: "Primary navigation",
     eyebrow: "Open source · Self-hosted · Apache 2.0",
     title: "A practical POS for one small shop.",
     lead: "Run sales, tables, orders, shifts, reports, and 80 mm receipts from your own server — with shared PostgreSQL data across computers and tablets.",
     github: "View on GitHub", install: "Quick start", video: "Watch product video",
+    workflowKicker: "01 — WORKFLOW", productKicker: "02 — PRODUCT", scopeKicker: "04 — SCOPE", transparencyKicker: "TRANSPARENCY",
+    terminalLabel: "Installation commands", heroImageAlt: "Store MGMT application preview",
     builtFor: "Built for daily store operations",
     builtForText: "Store MGMT keeps the workflow focused: staff can sell and print, while admins control menus, accounts, reports, and audit history.",
     features: [
@@ -41,35 +44,38 @@ const copy = {
     discussions: "Open a discussion", issues: "Report a reproducible issue", footer: "Store MGMT Community Edition · Apache License 2.0",
   },
   vi: {
-    nav: ["Tính năng", "Giao diện", "Triển khai", "Giới hạn"],
-    eyebrow: "Mã nguồn mở · Self-hosted · Apache 2.0", title: "POS thực dụng cho một cửa hàng nhỏ.",
+    nav: ["Tính năng", "Màn hình", "Triển khai", "Giới hạn"],
+    navLabel: "Điều hướng chính",
+    eyebrow: "Mã nguồn mở · Self-hosted · Apache 2.0", title: "POS vừa đủ cho một cửa hàng nhỏ.",
     lead: "Quản lý bán hàng, bàn, đơn hàng, ca, báo cáo và bill 80 mm trên server riêng — dùng chung dữ liệu PostgreSQL giữa máy tính và máy tính bảng.",
     github: "Xem trên GitHub", install: "Cài đặt nhanh", video: "Xem video sản phẩm",
-    builtFor: "Tập trung vào vận hành hằng ngày", builtForText: "Store MGMT giữ quy trình gọn: nhân viên bán hàng và in bill, trong khi admin quản lý menu, tài khoản, báo cáo và audit log.",
+    workflowKicker: "01 — QUY TRÌNH", productKicker: "02 — SẢN PHẨM", scopeKicker: "04 — PHẠM VI", transparencyKicker: "MINH BẠCH",
+    terminalLabel: "Lệnh cài đặt", heroImageAlt: "Ảnh xem trước ứng dụng Store MGMT",
+    builtFor: "Tập trung cho vận hành hằng ngày", builtForText: "Store MGMT giữ quy trình gọn: nhân viên bán hàng và in bill; admin quản lý menu, tài khoản, báo cáo và audit log.",
     features: [
-      ["Bán hàng và đơn", "POS thân thiện với cảm ứng, quản lý bàn, tại chỗ hoặc mang đi, tiền cọc, giảm giá, ghi chú và phương thức thanh toán."],
-      ["Quản lý menu", "Quản lý món, loại món, tag, giá và trạng thái kinh doanh ngay trong giao diện Admin."],
-      ["Admin và Staff", "Hai vai trò cố định, kiểm soát phiên, khóa đơn đã thanh toán, khôi phục mật khẩu và audit log."],
-      ["Báo cáo doanh thu", "Doanh thu ngày, tháng, năm; phương thức thanh toán; món bán chạy; tiền đầu và cuối ca."],
-      ["Bill nhiệt 80 mm", "Dùng hộp thoại in của trình duyệt hoặc WebUSB ESC/POS với máy in nhiệt tương thích."],
-      ["Tiếng Việt và English", "Chuyển ngôn ngữ giao diện và bill, dữ liệu ứng dụng lưu bằng UTF-8 trên PostgreSQL."],
+      ["Bán hàng và đơn hàng", "POS tối ưu cho thao tác chạm: quản lý bàn, dùng tại chỗ hoặc mang đi, tiền cọc, giảm giá, ghi chú và phương thức thanh toán."],
+      ["Quản lý menu", "Thêm và quản lý món, loại món, tag, giá bán và trạng thái đang bán ngay trong giao diện Admin — không cần sửa file cấu hình."],
+      ["Admin và Staff", "Hai vai trò cố định, kiểm soát phiên đăng nhập, khóa đơn đã thanh toán, đổi mật khẩu và audit log."],
+      ["Báo cáo doanh thu", "Theo dõi doanh thu theo ngày, tháng và năm; phương thức thanh toán; món bán chạy; tiền mặt đầu ca và tổng tiền cuối ca."],
+      ["Bill nhiệt 80 mm", "In qua hộp thoại in của trình duyệt hoặc gửi lệnh WebUSB ESC/POS trực tiếp tới máy in nhiệt tương thích."],
+      ["Tiếng Việt và English", "Chuyển ngôn ngữ giao diện và bill; dữ liệu tiếng Việt có dấu được lưu bằng UTF-8 trong PostgreSQL."],
     ],
-    screensTitle: "Giao diện thực tế của ứng dụng", screensText: "Đây là ảnh chụp từ Community Edition, không phải mockup thiết kế.",
+    screensTitle: "Xem ứng dụng thực tế", screensText: "Ảnh chụp trực tiếp từ Community Edition, không phải mockup.",
     screens: [
       ["Màn hình bán hàng", "Bàn, món, tổng đơn, giảm giá, tiền cọc và thanh toán trong cùng một màn hình."],
-      ["Menu và giá", "Quản lý món, tag, trạng thái kinh doanh và giá từ giao diện Admin."],
-      ["Bill 80 mm", "Xem trước, in lại bill, dùng browser print hoặc WebUSB ESC/POS."],
-      ["Phân tích doanh thu", "Theo dõi xu hướng doanh thu, phương thức thanh toán, món bán chạy và tiền ca."],
+      ["Menu và giá", "Quản lý món, tag, trạng thái bán và giá từ giao diện Admin."],
+      ["Bill 80 mm", "Xem trước và in lại bill bằng browser print hoặc WebUSB ESC/POS."],
+      ["Phân tích doanh thu", "Theo dõi xu hướng doanh thu, cơ cấu thanh toán, món bán chạy và tiền mặt theo ca."],
     ],
     deployEyebrow: "Docker Compose + PostgreSQL", deployTitle: "Chạy trên hạ tầng do bạn quản lý.",
-    deployText: "Chỉ cần Linux, Docker, Git và OpenSSL. Script cài đặt tạo mật khẩu tài khoản và database secret riêng — không có mật khẩu mặc định công khai.",
-    steps: ["Clone repository công khai", "Chạy script tạo mật khẩu", "Build và khởi động bằng Docker Compose"],
+    deployText: "Chỉ cần một máy Linux, Docker, Git và OpenSSL. Setup script sẽ tạo mật khẩu tài khoản và database secret riêng — không đặt sẵn mật khẩu mặc định công khai.",
+    steps: ["Clone repo", "Chạy setup script để tạo mật khẩu", "Build và khởi động bằng Docker Compose"],
     copyLabel: "Sao chép", copiedLabel: "Đã chép",
-    limitsTitle: "Phạm vi hiện tại được nói rõ", limitsText: "Community Edition hiện tập trung vào một cửa hàng cho mỗi deployment. Hãy xem các giới hạn trước khi dùng thực tế.",
-    limits: ["Chưa hỗ trợ multi-store hoặc multi-tenant", "Không tích hợp máy POS ngân hàng hoặc xử lý thanh toán", "Không có fiscalization, hóa đơn điện tử hoặc tích hợp kế toán", "Không trừ kho theo công thức/BOM", "Không có màn hình bếp KDS"],
-    transparencyTitle: "Maintainer trực tiếp phát triển, công khai hỗ trợ AI",
-    transparencyText: "Store MGMT do maintainer của dự án xây dựng và duy trì với sự hỗ trợ đáng kể từ OpenAI Codex. Maintainer vẫn chịu trách nhiệm về kiến trúc, review code, kiểm thử, quyết định bảo mật và phát hành.",
-    feedbackTitle: "Thử trong quy trình thực tế", feedbackText: "Phản hồi về máy in, nhiều thiết bị, backup/restore và quy trình cửa hàng còn thiếu có giá trị hơn các yêu cầu tính năng chung chung.",
+    limitsTitle: "Phạm vi hiện tại", limitsText: "Community Edition hiện hỗ trợ một cửa hàng cho mỗi deployment. Hãy xem các giới hạn này trước khi dùng trong môi trường thực tế.",
+    limits: ["Chưa hỗ trợ nhiều cửa hàng hoặc multi-tenant", "Chưa có card terminal hoặc payment processing", "Chưa có fiscalization, e-invoice hoặc accounting integration", "Chưa trừ tồn kho theo recipe/BOM", "Chưa có kitchen display system (KDS)"],
+    transparencyTitle: "Dự án do maintainer phát triển, có hỗ trợ từ AI",
+    transparencyText: "Store MGMT do maintainer của dự án trực tiếp xây dựng và duy trì, với sự hỗ trợ đáng kể từ OpenAI Codex. Maintainer vẫn chịu trách nhiệm về kiến trúc, review code, kiểm thử, quyết định bảo mật và các bản phát hành.",
+    feedbackTitle: "Hãy thử trong quy trình thực tế", feedbackText: "Feedback về khả năng tương thích máy in, sử dụng trên nhiều thiết bị, backup/restore và những quy trình cửa hàng còn thiếu sẽ hữu ích hơn các yêu cầu tính năng chung chung.",
     discussions: "Mở thảo luận", issues: "Báo lỗi có thể tái hiện", footer: "Store MGMT Community Edition · Apache License 2.0",
   },
 } as const;
@@ -104,24 +110,24 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Store MGMT home"><span className="brand-mark">SM</span><span><strong>STORE MGMT</strong><small>COMMUNITY EDITION</small></span></a>
-        <nav aria-label="Primary navigation">{t.nav.map((item, index) => <a key={item} href={["#features", "#screens", "#deploy", "#limits"][index]}>{item}</a>)}</nav>
+        <nav aria-label={t.navLabel}>{t.nav.map((item, index) => <a key={item} href={["#features", "#screens", "#deploy", "#limits"][index]}>{item}</a>)}</nav>
         <div className="header-actions"><div className="language-switch" aria-label="Language"><button type="button" className={language === "en" ? "active" : ""} aria-pressed={language === "en"} onClick={() => changeLanguage("en")}>EN</button><button type="button" className={language === "vi" ? "active" : ""} aria-pressed={language === "vi"} onClick={() => changeLanguage("vi")}>VI</button></div><a className="github-link" href={repo} target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></div>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy"><p className="eyebrow"><span />{t.eyebrow}</p><h1>{t.title}</h1><p className="hero-lead">{t.lead}</p><div className="cta-row"><a className="button primary" href={repo} target="_blank" rel="noopener noreferrer">{t.github}<span>↗</span></a><a className="button secondary" href="#deploy">{t.install}<span>↓</span></a></div><a className="video-link" href={`${repo}/releases/download/v1.0.1/store-mgmt-guide.mp4`} target="_blank" rel="noopener noreferrer"><span>▶</span>{t.video}</a></div>
-        <div className="hero-media"><div className="media-window"><div className="window-bar"><span /><span /><span /><em>store-mgmt.local</em></div><Image src="/media/product-preview.gif" alt="Store MGMT application preview" width={720} height={405} sizes="(max-width: 1050px) 100vw, 55vw" unoptimized priority /></div><div className="media-note"><strong>80 mm</strong><span>Browser print<br />WebUSB ESC/POS</span></div></div>
+        <div className="hero-media"><div className="media-window"><div className="window-bar"><span /><span /><span /><em>store-mgmt.local</em></div><Image src="/media/product-preview.gif" alt={t.heroImageAlt} width={720} height={405} sizes="(max-width: 1050px) 100vw, 55vw" unoptimized priority /></div><div className="media-note"><strong>80 mm</strong><span>Browser print<br />WebUSB ESC/POS</span></div></div>
       </section>
 
-      <section className="section intro" id="features"><div className="section-heading"><p className="kicker">01 — WORKFLOW</p><h2>{t.builtFor}</h2><p>{t.builtForText}</p></div><div className="feature-grid">{t.features.map(([title, description], index) => <article className="feature-card" key={title}><Mark index={index} /><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+      <section className="section intro" id="features"><div className="section-heading"><p className="kicker">{t.workflowKicker}</p><h2>{t.builtFor}</h2><p>{t.builtForText}</p></div><div className="feature-grid">{t.features.map(([title, description], index) => <article className="feature-card" key={title}><Mark index={index} /><h3>{title}</h3><p>{description}</p></article>)}</div></section>
 
-      <section className="section screens-section" id="screens"><div className="section-heading horizontal"><div><p className="kicker">02 — PRODUCT</p><h2>{t.screensTitle}</h2></div><p>{t.screensText}</p></div><div className="screens-grid">{t.screens.map(([title, description], index) => <figure className={`screen-card screen-${index + 1}`} key={title}><div className="screen-image"><Image src={`/screenshots/${screenImages[index]}`} alt={title} width={screenSizes[index][0]} height={screenSizes[index][1]} sizes="(max-width: 720px) 100vw, 50vw" unoptimized /></div><figcaption><span>0{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div></figcaption></figure>)}</div></section>
+      <section className="section screens-section" id="screens"><div className="section-heading horizontal"><div><p className="kicker">{t.productKicker}</p><h2>{t.screensTitle}</h2></div><p>{t.screensText}</p></div><div className="screens-grid">{t.screens.map(([title, description], index) => <figure className={`screen-card screen-${index + 1}`} key={title}><div className="screen-image"><Image src={`/screenshots/${screenImages[index]}`} alt={title} width={screenSizes[index][0]} height={screenSizes[index][1]} sizes="(max-width: 720px) 100vw, 50vw" unoptimized /></div><figcaption><span>0{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div></figcaption></figure>)}</div></section>
 
-      <section className="deploy-section" id="deploy"><div className="deploy-copy"><p className="kicker light">03 — {t.deployEyebrow}</p><h2>{t.deployTitle}</h2><p>{t.deployText}</p><ol>{t.steps.map((step, index) => <li key={step}><span>{index + 1}</span>{step}</li>)}</ol></div><div className="terminal" aria-label="Installation commands"><div className="terminal-top"><span>quick-start.sh</span><button type="button" onClick={copyCommand}>{copied ? t.copiedLabel : t.copyLabel}</button></div><pre><code><span className="prompt">$</span> git clone {repo}.git{"\n"}<span className="prompt">$</span> cd store-mgmt-community{"\n"}<span className="prompt">$</span> bash scripts/setup-linux.sh{"\n"}<span className="prompt">$</span> docker compose up -d --build</code></pre><div className="terminal-status"><span className="status-dot" /> http://localhost:6086</div></div></section>
+      <section className="deploy-section" id="deploy"><div className="deploy-copy"><p className="kicker light">03 — {t.deployEyebrow}</p><h2>{t.deployTitle}</h2><p>{t.deployText}</p><ol>{t.steps.map((step, index) => <li key={step}><span>{index + 1}</span>{step}</li>)}</ol></div><div className="terminal" aria-label={t.terminalLabel}><div className="terminal-top"><span>quick-start.sh</span><button type="button" onClick={copyCommand}>{copied ? t.copiedLabel : t.copyLabel}</button></div><pre><code><span className="prompt">$</span> git clone {repo}.git{"\n"}<span className="prompt">$</span> cd store-mgmt-community{"\n"}<span className="prompt">$</span> bash scripts/setup-linux.sh{"\n"}<span className="prompt">$</span> docker compose up -d --build</code></pre><div className="terminal-status"><span className="status-dot" /> http://localhost:6086</div></div></section>
 
-      <section className="section limits-section" id="limits"><div className="section-heading"><p className="kicker">04 — SCOPE</p><h2>{t.limitsTitle}</h2><p>{t.limitsText}</p></div><ul className="limits-list">{t.limits.map((limit) => <li key={limit}><span>—</span>{limit}</li>)}</ul></section>
+      <section className="section limits-section" id="limits"><div className="section-heading"><p className="kicker">{t.scopeKicker}</p><h2>{t.limitsTitle}</h2><p>{t.limitsText}</p></div><ul className="limits-list">{t.limits.map((limit) => <li key={limit}><span>—</span>{limit}</li>)}</ul></section>
 
-      <section className="section transparency"><div className="transparency-card"><p className="kicker">TRANSPARENCY</p><h2>{t.transparencyTitle}</h2><p>{t.transparencyText}</p></div><div className="feedback-card"><h2>{t.feedbackTitle}</h2><p>{t.feedbackText}</p><div><a href={`${repo}/discussions`} target="_blank" rel="noopener noreferrer">{t.discussions} ↗</a><a href={`${repo}/issues`} target="_blank" rel="noopener noreferrer">{t.issues} ↗</a></div></div></section>
+      <section className="section transparency"><div className="transparency-card"><p className="kicker">{t.transparencyKicker}</p><h2>{t.transparencyTitle}</h2><p>{t.transparencyText}</p></div><div className="feedback-card"><h2>{t.feedbackTitle}</h2><p>{t.feedbackText}</p><div><a href={`${repo}/discussions`} target="_blank" rel="noopener noreferrer">{t.discussions} ↗</a><a href={`${repo}/issues`} target="_blank" rel="noopener noreferrer">{t.issues} ↗</a></div></div></section>
 
       <footer><a className="brand compact" href="#top"><span className="brand-mark">SM</span><span><strong>STORE MGMT</strong></span></a><p>{t.footer}</p><a href={repo} target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
     </main>
