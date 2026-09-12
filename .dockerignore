@@ -1,0 +1,9 @@
+.git
+.github
+.openai
+.sites-runtime
+.wrangler
+dist
+node_modules
+npm-debug.log*
+README.md
